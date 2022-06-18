@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twice</title>
+    <link rel="icon" href="twice.png" type="image/x-icon">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <section>
+        <header>
+            <a href="#"><img class="logo" src="twice.png"></a>
+                <div class="toggle" onclick="toggleMenu();"></div>    
+                    <ul class="navigation">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="https://twice.jype.com/">About</a></li>
+                        <li><a href="https://twice.jype.com/">Member</a></li>
+                        <li><a href="https://twice.jype.com/">Playlist</a></li>
+                        <li><a href="https://twice.jype.com/">Contact</a></li>
+                    </ul>
+        </header>
+        <div class="content">
+            
+            <div class="imgBox">
+                <img src="member.png" class="starbucks">
+            </div>
+            
+            <div class="textBox">
+
+                <h2>Hello, We are <span>Twice</span> (트와이스)</h2>
+                <p>is a South Korean girl group formed by <b>JYP Entertainment.</b></p>
+                      <a href="#">Check This Out!</a>
+            </div>
+            
+        </div>
+        <ul class="sci">
+            <li><a href="https://id-id.facebook.com/JYPETWICE"><img src="facebook.png"></a></li>
+            <li><a href="https://twitter.com/JYPETWICE"><img src="twitter.png"></a></li>
+            <li><a href="https://www.instagram.com/twicetagram/"><img src="instagram.png"></a></li>
+        </ul>
+    </section>
+    
+    <div class="contents">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 10</div>
+                <img src="twice3.jpg" style="width:100%">
+                <div class="text">Full Squad</div>
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 10</div>
+                <img src="nayeon.jpg" style="width:100%">
+                <div class="text">Nayeon</div>
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 10</div>
+                <img src="jihyo.jpg" style="width:100%">
+                <div class="text">Jihyo</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 10</div>
+                <img src="jeongyeon.jpg" style="width:100%">
+                <div class="text">Jeongyeon</div>
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 10</div>
+                <img src="mina.jpg" style="width:100%">
+                <div class="text">Mina</div>
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numbertext">6 / 10</div>
+                <img src="momo.jpg" style="width:100%">
+                <div class="text">Momo</div>
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numbertext">7 / 10</div>
+                <img src="chaeyoung.jpg" style="width:100%">
+                <div class="text">Chaeyoung</div>
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numbertext">8 / 10</div>
+                <img src="tzuyu.jpg" style="width:100%">
+                <div class="text">Tzuyu</div>
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numbertext">9 / 10</div>
+                <img src="dahyun.jpg" style="width:100%">
+                <div class="text">Dahyun</div>
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numbertext">10 / 10</div>
+                <img src="sana.jpg" style="width:100%">
+                <div class="text">Sana</div>
+            </div>
+            
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+            <span class="dot" onclick="currentSlide(10)"></span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="video">
+        <h1>Twice Music Video</h1>
+        <iframe class='responsive-iframe' width="768" height="432" src="https://www.youtube.com/embed/VQtonf1fv_s?autoplay=1" title="TWICE "SIGNAL" M/V" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        }
+
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('.navigation')
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+
+    </script>
+</body>
+</html>
